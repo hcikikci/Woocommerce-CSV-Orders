@@ -4,27 +4,35 @@ class Order
 {
     // Properties
 
-    private $values;
-    private $products;
 
+    /**
+     * @param $values
+     * @param $products
+     */
+    public function __construct($values, $products)
+    {
+        $this->values = $values;
+        $this->products = $products;
+    }
 
-
+    /**
+     * @return mixed
+     */
     public function get_values()
     {
         return $this->values;
     }
 
-    public function set_values($values)
+    /**
+     * @param mixed $values
+     */
+    public function set_values($values): void
     {
         $this->values = $values;
-
-        return $this;
     }
 
-
-    /**safafsfasafdeneme yazısı kanka saplfalp
-     * deneme
-     * Get the value of products
+    /**
+     * @return mixed
      */
     public function get_products()
     {
@@ -32,15 +40,14 @@ class Order
     }
 
     /**
-     * Set the value of products
-     *
-     * @return  self
+     * @param mixed $products
      */
-    public function set_products($products)
+    public function set_products($products): void
     {
         $this->products = $products;
-
-        return $this;
     }
+
+
+
 
 }
